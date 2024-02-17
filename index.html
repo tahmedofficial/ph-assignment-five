@@ -19,6 +19,8 @@
                         clifford: '#da373d',
                         'primary_color': '#20d404',
                         'primary_color_bg': '#20d4041a',
+                        'offers_color1_bg': '#FFBF0F',
+                        'offers_color2_bg': '#F78C9C',
                     }
                 }
             }
@@ -83,7 +85,7 @@
                             directly
                             within the app. The
                             integrated testing features allow for a streamlined .</p>
-                        <button class="btn lg:text-lg text-white border-0 bg-primary_color">Buy Tickets</button>
+                        <button class="btn lg:text-lg text-black border-0 bg-primary_color">Buy Tickets</button>
                     </div>
                 </div>
             </div>
@@ -127,6 +129,40 @@
     </header>
 
     <main>
+        <!-- best offers section -->
+        <section class="lg:container lg:mx-auto text-center mt-14 lg:mt-48">
+            <h3 class="text-5xl font-bold">Best offers for you</h3>
+            <!-- offers card -->
+            <div class="flex flex-col lg:flex-row gap-10 mt-16 justify-center">
+                <!-- offers card 1 -->
+                <div class="shadow-xl flex items-center justify-center gap-10 bg-offers_color1_bg h-48 rounded-3xl">
+                    <div class="lg:p-10">
+                        <h3 class="text-5xl font-extrabold mb-3">15% OFF</h3>
+                        <p class="text-xl mb-3">on your next purchase</p>
+                        <p class="text-xl">use by January 2024</p>
+                    </div>
+                    <hr class="h-full border border-dashed border-white">
+                    <div class="lg:p-10">
+                        <h3 class="text-4xl font-bold mb-3">NEW15</h3>
+                        <p class="text-xl">Coupon Code</p>
+                    </div>
+                </div>
+                <!-- offers card 1 -->
+                <div class="shadow-xl flex items-center justify-center gap-10 bg-offers_color2_bg h-48 rounded-3xl">
+                    <div class="lg:p-10">
+                        <h3 class="text-5xl font-extrabold mb-3">20% OFF</h3>
+                        <p class="text-xl mb-3">on your next purchase</p>
+                        <p class="text-xl">use by January 2024</p>
+                    </div>
+                    <hr class="h-full border border-dashed border-white">
+                    <div class="lg:p-10">
+                        <h3 class="text-4xl font-bold mb-3">Couple 20</h3>
+                        <p class="text-xl">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn h-16 rounded-xl w-52 border-primary_color text-primary_color text-xl bg-white mt-14">See All Offers</button>
+        </section>
 
     </main>
 
