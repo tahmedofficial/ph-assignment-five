@@ -5,9 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment five</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="styles/mainstyle.css">
     <!-- tailwindcss and daisy ui set up -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind custom classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary_color': '#20d404',
+                        'primary_color_bg': '#20d4041a',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="text_font">
@@ -36,7 +52,7 @@
                     <a class="btn btn-ghost text-3xl lg:text-5xl font-bold">E-Ticket</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 text-xl">
+                    <ul class="menu menu-horizontal px-1 text-lg">
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Destination</a></li>
@@ -44,7 +60,7 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <div class="btn text-[#20d404] bg-[#20d4041a] border-[#20d404] font-semibold text-xl">
+                    <div class="btn text-primary_color bg-primary_color_bg border-primary_color font-semibold text-xl">
                         Bus
                         <img src="images/bus-icon.png" alt="">
                     </div>
@@ -52,6 +68,62 @@
             </div>
         </nav>
         <!-- end nav bar -->
+
+        <!-- header section -->
+        <section>
+            <div class="hero">
+                <img class="w-full" src="images/banner.png" alt="">
+                <div class="hero-content text-center text-neutral-content">
+                    <div>
+                        <h1 class="md:mb-5 text-3xl md:text-5xl lg:text-7xl font-extrabold text-white">End-to-End
+                            Travel with</h1>
+                        <h1 class="mb-5 text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary_color">E Paribahan
+                        </h1>
+                        <p class="mb-5 text-white text-sm md:text-xl">Yes, you can run unit tests and view the results
+                            directly
+                            within the app. The
+                            integrated testing features allow for a streamlined .</p>
+                        <button class="btn lg:text-lg text-white border-0 bg-primary_color">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <!-- bottom card -->
+            <div class="flex px-4 flex-col lg:flex-row gap-4 justify-center lg:absolute lg:top-3/4 lg:left-1/4">
+                <!-- card 1 -->
+                <div
+                    class="flex justify-center gap-4 items-center shadow-lg bg-white rounded-3xl border-b-4 border-primary_color h-24 lg:w-80 lg:h-40">
+                    <div>
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="text-4xl lg:text-5xl font-bold">500K+</h3>
+                        <p class="text-xl">Registered users</p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div
+                    class="flex justify-center gap-4 items-center shadow-lg bg-white rounded-3xl border-b-4 border-primary_color h-24 lg:w-80 lg:h-40">
+                    <div>
+                        <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="text-4xl lg:text-5xl font-bold">1.7 lacks</h3>
+                        <p class="text-xl">Tickets sold</p>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div
+                    class="flex justify-center gap-4 items-center shadow-lg bg-white rounded-3xl border-b-4 border-primary_color h-24 lg:w-80 lg:h-40">
+                    <div>
+                        <img src="images/stoppage.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="text-4xl lg:text-5xl font-bold">80K+</h3>
+                        <p class="text-xl">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
 
     <main>
@@ -62,6 +134,7 @@
 
     </footer>
 
+    <script src="scripts/mainscript.js"></script>
 </body>
 
 </html>
