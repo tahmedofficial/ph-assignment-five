@@ -32,7 +32,7 @@
 
     <header class="lg:container lg:mx-auto mt-2">
         <!-- start nav bar -->
-        <nav>
+        <nav class="mb-6">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -257,10 +257,10 @@
 
             </div>
 
-            <!-- select your seat section main container -->
-            <div class="lg:container lg:mx-auto bg-white mt-7 rounded-3xl p-10 flex flex-col lg:flex-row gap-28">
+            <!-- select your seat main section container -->
+            <section class="lg:container lg:mx-auto bg-white mt-7 rounded-3xl p-10 flex flex-col lg:flex-row gap-28">
 
-                <!-- seat section container -->
+                <!-- seat section container left side -->
                 <div class="w-full">
                     <!-- seat section heading -->
                     <div>
@@ -474,7 +474,7 @@
                 <!-- mid border -->
                 <hr class="border border-dashed border-[#cdcdcdea] lg:h-[920px]">
 
-                <!-- display and input container -->
+                <!-- main display and input section container right side -->
                 <div class="w-full">
                     <div>
                         <p class="text-3xl font-bold mb-4">Select Your Seat</p>
@@ -482,9 +482,88 @@
                         <!-- border -->
                         <hr class="border border-dashed border-[#cdcdcdea] w-full">
                     </div>
+
+                    <!-- price calculation container -->
+                    <div class="bg-[#cdcdcd25] rounded-2xl p-10 mt-7">
+
+                        <div class="flex justify-between mb-5">
+                            <div class="flex gap-1">
+                                <p class="text-xl text-black">Seat</p>
+                                <p class="text-lg bg-primary_color text-white w-8 rounded-lg text-center">0</p>
+                            </div>
+                            <P class="text-xl text-black">Class</P>
+                            <P class="text-xl text-black">Price</P>
+                        </div>
+
+                        <!-- border -->
+                        <hr class="border border-dashed border-[#cdcdcdea] w-full">
+
+                        <div class="flex justify-between text-[#0000007e] my-5">
+                            <P class="text-xl">C2</P>
+                            <P class="text-xl">Economoy</P>
+                            <P class="text-xl">550</P>
+                        </div>
+
+                        <div class="flex justify-between text-[#0000007e] mb-5">
+                            <P class="text-xl">C2</P>
+                            <P class="text-xl">Economoy</P>
+                            <P class="text-xl">550</P>
+                        </div>
+
+                        <!-- border -->
+                        <hr class="border border-[#cdcdcdea] w-full">
+
+                        <div class="flex justify-between my-5">
+                            <P class="text-xl text-black">Total Price</P>
+                            <P class="text-xl text-black">BDT <span>1100</span></P>
+                        </div>
+
+                        <div>
+                            <label class="input flex border-0 h-14">
+                                <input type="text" class="grow" placeholder="Have any copupon?" />
+                                <button class="btn text-white bg-primary_color my-auto">Apply</button>
+                            </label>
+                        </div>
+
+                        <div class="flex justify-between mt-5">
+                            <P class="text-xl text-black">Grand Total</P>
+                            <P class="text-xl text-black">BDT <span>1100</span></P>
+                        </div>
+
+                    </div>
+
+                    <!-- input information container -->
+                    <div class="flex flex-col gap-4 mt-6">
+                        <p class="text-xl font-semibold">Passenger Name*</p>
+                        <input class="border-2 h-14 rounded-lg pl-4 outline-none" type="text"
+                            placeholder="Enter your name">
+
+                        <p class="text-xl font-semibold">Phone Number*</p>
+                        <input class="border-2 h-14 rounded-lg pl-4 outline-none" type="text"
+                            placeholder="Enter your phone number">
+
+                        <p class="text-xl font-semibold">Email ID</p>
+                        <input class="border-2 h-14 rounded-lg pl-4 outline-none" type="text"
+                            placeholder="Enter your email id">
+                        <button class="btn bg-primary_color text-white w-full mt-5">Next</button>
+
+                        <div class="flex justify-around">
+                            <div>
+                                <p>Terms and Conditions</p>
+                                <!-- border -->
+                                <hr class="border border-[#cdcdcdea] w-full">
+                            </div>
+                            <div>
+                                <p>Cancellation Policy</p>
+                                <!-- border -->
+                                <hr class="border border-[#cdcdcdea] w-full">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-            </div>
+            </section>
 
         </section>
     </main>
