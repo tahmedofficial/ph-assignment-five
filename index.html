@@ -135,26 +135,36 @@
             <!-- offers card -->
             <div class="flex flex-col lg:flex-row gap-10 mt-16 justify-center">
                 <!-- offers card 1 -->
-                <div class="shadow-xl flex items-center justify-center gap-10 bg-offers_color1_bg h-48 rounded-3xl">
+                <div
+                    class="shadow-xl flex items-center justify-center gap-10 bg-offers_color1_bg h-[220px] rounded-3xl">
                     <div class="lg:p-10">
                         <h3 class="text-5xl font-extrabold mb-3">15% OFF</h3>
                         <p class="text-xl mb-3">on your next purchase</p>
                         <p class="text-xl">use by January 2024</p>
                     </div>
-                    <hr class="h-full border border-dashed border-white">
+                    <!-- devider -->
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+
                     <div class="lg:p-10">
                         <h3 class="text-4xl font-bold mb-3">NEW15</h3>
                         <p class="text-xl">Coupon Code</p>
                     </div>
                 </div>
-                <!-- offers card 1 -->
-                <div class="shadow-xl flex items-center justify-center gap-10 bg-offers_color2_bg h-48 rounded-3xl">
+                <!-- offers card 2 -->
+                <div
+                    class="shadow-xl flex items-center justify-center gap-10 bg-offers_color2_bg h-[220px] rounded-3xl">
                     <div class="lg:p-10">
                         <h3 class="text-5xl font-extrabold mb-3">20% OFF</h3>
                         <p class="text-xl mb-3">on your next purchase</p>
                         <p class="text-xl">use by January 2024</p>
                     </div>
-                    <hr class="h-full border border-dashed border-white">
+                    <!-- devider -->
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+
                     <div class="lg:p-10">
                         <h3 class="text-4xl font-bold mb-3">Couple 20</h3>
                         <p class="text-xl">Coupon Code</p>
@@ -165,7 +175,7 @@
                 All Offers</button>
         </section>
         <!-- E-Paribahan -->
-        <section class="bg-[#cdcdcd25] mt-24 rounded-t-[100px] border-t-2 border-primary_color">
+        <section class="bg-[#cdcdcd25] mt-24 pb-32 rounded-t-[100px] border-t-2 border-primary_color">
             <!-- E-Paribahan heading text -->
             <div class="text-center pt-24">
                 <h3 class="text-5xl font-bold">P.H Paribahan</h3>
@@ -233,7 +243,7 @@
 
                 </div>
 
-                <!-- border -->
+                <!-- devider -->
                 <hr class="border border-dashed border-primary_color lg:h-[435px]">
 
                 <!-- ticket price container -->
@@ -248,13 +258,41 @@
             </div>
 
             <!-- select your seat section main container -->
-            <div class="lg:container lg:mx-auto bg-white mt-7 rounded-3xl p-10">
+            <div class="lg:container lg:mx-auto bg-white mt-7 rounded-3xl p-10 flex flex-col lg:flex-row gap-28">
 
                 <!-- seat section container -->
-                <div>
-                    <!-- set container -->
+                <div class="w-full">
+                    <!-- seat section heading -->
+                    <div>
+                        <p class="text-3xl font-bold mb-4">Select Your Seat</p>
+
+                        <!-- border -->
+                        <hr class="border border-dashed border-[#cdcdcdea] w-full">
+
+                        <div class="flex justify-between my-5">
+                            <div class="flex gap-3">
+                                <img src="images/seat-gray.png" alt="">
+                                <p class="text-2xl font-semibold text-[#0000009a]">Available</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <img src="images/seat-green-filled.png" alt="">
+                                <p class="text-2xl font-semibold text-primary_color">Selected</p>
+                            </div>
+                        </div>
+
+                        <!-- border -->
+                        <hr class="border border-dashed border-[#cdcdcdea] w-full">
+                    </div>
+
+                    <!-- driver seat -->
+                    <div class="flex justify-end">
+                        <div class="bg-[#cdcdcd88] w-28 h-12 flex justify-center items-center rounded-xl my-6">
+                            <img class="h-6" src="images/engine.png" alt="">
+                        </div>
+                    </div>
+                    <!-- seat container -->
                     <div class="flex gap-10">
-                        <!-- set left -->
+                        <!-- seat left -->
                         <div class="grid grid-cols-2 gap-6">
                             <div class="flex items-center gap-6">
                                 <p class="text-[#00000096] text-lg font-semibold">A</p>
@@ -367,7 +405,7 @@
                             </div>
 
                         </div>
-                        <!-- set right -->
+                        <!-- seat right -->
                         <div class="grid grid-cols-2 gap-6">
                             <div class="bg-[#cdcdcd25] w-28 h-12 flex justify-center items-center rounded-xl">
                                 <p id="A3" class="font-semibold text-[#00000096]">A3</p>
@@ -433,9 +471,17 @@
                     </div>
                 </div>
 
-                <!-- display and input section container -->
-                <div>
+                <!-- mid border -->
+                <hr class="border border-dashed border-[#cdcdcdea] lg:h-[920px]">
 
+                <!-- display and input container -->
+                <div class="w-full">
+                    <div>
+                        <p class="text-3xl font-bold mb-4">Select Your Seat</p>
+
+                        <!-- border -->
+                        <hr class="border border-dashed border-[#cdcdcdea] w-full">
+                    </div>
                 </div>
 
             </div>
@@ -454,7 +500,7 @@
                 <h3 class="text-3xl font-bold mb-5">Download our app</h3>
                 <div class="flex items-center gap-2 border border-white rounded-lg w-48 p-2">
                     <div>
-                        <img src="images/google-play.png" alt="">
+                        <img src="images/playstore.png" alt="">
                     </div>
                     <div>
                         <p class="text-xs">GET IT ON</p>
