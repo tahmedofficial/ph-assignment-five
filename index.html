@@ -550,7 +550,7 @@
                             <P class="text-xl text-black">Total Price</P>
                             <P class="text-xl text-black">BDT <span id="total_price">0</span></P>
                         </div>
-                        <div class="flex justify-between my-5">
+                        <div id="discount_box" class="flex justify-between my-5 hidden">
                             <P class="text-xl text-black">Discount Price</P>
                             <P class="text-xl text-black">BDT <span id="discount">0</span></P>
                         </div>
@@ -563,7 +563,7 @@
                             </label>
                         </div>
 
-                        <!-- invalid coupon text -->
+                        <!-- invalid message -->
                         <div id="invalid_coupon" class="ml-3 mt-2 hidden">
                             <p class="text-red-600">invalid coupon code</p>
                         </div>
@@ -582,8 +582,12 @@
                             placeholder="Enter your name">
 
                         <p class="text-xl font-semibold">Phone Number*</p>
-                        <input class="border-2 h-14 rounded-lg pl-4 outline-none" type="number"
+                        <input id="phone_number" class="border-2 h-14 rounded-lg pl-4 outline-none" type="number"
                             placeholder="Enter your phone number">
+                            <!-- invalid message -->
+                        <div id="invalid_input" class="ml-3 hidden">
+                            <p class="text-red-600">Please enter a valid number</p>
+                        </div>
 
                         <p class="text-xl font-semibold">Email ID</p>
                         <input class="border-2 h-14 rounded-lg pl-4 outline-none" type="email"

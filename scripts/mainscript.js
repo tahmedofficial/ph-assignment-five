@@ -8,6 +8,13 @@ function setBackgroundColorById(elementId) {
     element.classList.add("text-white");
 }
 
+// remove background color
+function removeBackgroundColorById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove("bg-primary_color");
+    element.classList.remove("text-white");
+}
+
 // hide element
 function hideElementById(elementId) {
     const element = document.getElementById(elementId);
@@ -34,6 +41,12 @@ function getInputValue(elementId) {
     const inputValueText = inputField.value;
     return inputValueText;
 
+}
+
+// set input value
+function setInputValue(elementId, text) {
+    const inputField = document.getElementById(elementId);
+    inputField.value = text;
 }
 
 // convert to int
@@ -179,6 +192,7 @@ function countDiscountPrice(coupon, value) {
             hideElementById("input_field");
             hideElementById("invalid_coupon");
             setTextElementValueById("grand_total", grandTotal);
+            showElementById("discount_box");
         }
         else if (coupon == "Couple 20") {
             discount = (2200 / 100) * 20;
@@ -187,6 +201,7 @@ function countDiscountPrice(coupon, value) {
             hideElementById("input_field");
             hideElementById("invalid_coupon");
             setTextElementValueById("grand_total", grandTotal);
+            showElementById("discount_box");
         }
         else {
             showElementById("invalid_coupon");
@@ -196,11 +211,67 @@ function countDiscountPrice(coupon, value) {
 
 }
 
+// remove seat
+function removeSeat(elementId) {
+
+    const seatNumber = getTextElementValueById("select_seat");
+
+    if (seatNumber < 2) {
+        const seatName1 = getElementTextById("seat_name");
+        removeBackgroundColorById(seatName1);
+        setTextElementValueById("select_seat", "0");
+        setTextElementValueById("total_price", "0");
+        setTextElementValueById("grand_total", "0");
+        setTextElementValueById("current_set", "40");
+        setInputValue("phone_number", "");
+    }
+    if (seatNumber < 3) {
+        const seatName1 = getElementTextById("seat_name");
+        removeBackgroundColorById(seatName1);
+        const seatName2 = getElementTextById("seat_name2");
+        removeBackgroundColorById(seatName2);
+        setTextElementValueById("select_seat", "0");
+        setTextElementValueById("total_price", "0");
+        setTextElementValueById("grand_total", "0");
+        setTextElementValueById("current_set", "40");
+        setInputValue("phone_number", "");
+    }
+    if (seatNumber < 4) {
+        const seatName1 = getElementTextById("seat_name");
+        removeBackgroundColorById(seatName1);
+        const seatName2 = getElementTextById("seat_name2");
+        removeBackgroundColorById(seatName2);
+        const seatName3 = getElementTextById("seat_name3");
+        removeBackgroundColorById(seatName3);
+        setTextElementValueById("select_seat", "0");
+        setTextElementValueById("total_price", "0");
+        setTextElementValueById("grand_total", "0");
+        setTextElementValueById("current_set", "40");
+        setInputValue("phone_number", "");
+    }
+    if (seatNumber < 5) {
+        const seatName1 = getElementTextById("seat_name");
+        removeBackgroundColorById(seatName1);
+        const seatName2 = getElementTextById("seat_name2");
+        removeBackgroundColorById(seatName2);
+        const seatName3 = getElementTextById("seat_name3");
+        removeBackgroundColorById(seatName3);
+        const seatName4 = getElementTextById("seat_name4");
+        removeBackgroundColorById(seatName4);
+        setTextElementValueById("select_seat", "0");
+        setTextElementValueById("total_price", "0");
+        setTextElementValueById("grand_total", "0");
+        setTextElementValueById("current_set", "40");
+        setInputValue("phone_number", "");
+    }
+
+}
+
 
 // check double
 function checkDouble(elementId) {
     const getClass = document.getElementById(elementId);
-    const myClass = getClass.classList
+    const myClass = getClass.classList;
 
     for (const c of myClass) {
         if (c == "bg-primary_color") {
@@ -236,29 +307,49 @@ function applyDiscount() {
 
 // next button
 function nextButton() {
-    hideElementById("header_container");
-    hideElementById("main_container");
-    hideElementById("footer_container");
-    showElementById("success_container");
+
+    const phoneNumber = getInputValue("phone_number");
+    if (phoneNumber.length != 0) {
+        const seatName = getElementTextById("seat_name");
+        if (seatName != null) {
+
+            hideElementById("header_container");
+            hideElementById("main_container");
+            hideElementById("footer_container");
+            showElementById("success_container");
+
+        }
+    }
+    else {
+        showElementById("invalid_input");
+    }
+
 }
 
 // continue button
 function continueButton() {
     hideElementById("success_container");
+    hideElementById("invalid_input");
+    hideElementById("discount_box");
     showElementById("header_container");
     showElementById("main_container");
     showElementById("footer_container");
+    showElementById("input_field");
+    removeSeat(1);
+    setInputValue("copupon_code", "");
+    setTextElementValueById("discount", "0");
+
 }
 
 
 // seat function start
 
 function ticketA1() {
-    mainCode("A1");
+    mainCode("A1")
 }
 
 function ticketA2() {
-    mainCode("A2");
+    mainCode("A2")
 }
 
 function ticketA3() {
