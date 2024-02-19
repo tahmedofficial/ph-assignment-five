@@ -8,6 +8,12 @@ function setBackgroundColorById(elementId) {
     element.classList.add("text-white");
 }
 
+// hide element
+function hideElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.add("hidden");
+};
+
 // get element text
 function getElementTextById(elementId) {
     const element = document.getElementById(elementId);
@@ -159,13 +165,20 @@ function countDiscountPrice(coupon, value) {
     if (value == 4) {
 
         let discount = 0;
+        let grandTotal = 0;
         if (coupon == "NEW15") {
             discount = (2200 / 100) * 15;
+            grandTotal = 2200 - discount;
             setTextElementValueById("discount", discount);
+            hideElementById("input_field");
+            setTextElementValueById("grand_total", grandTotal);
         }
         else if (coupon == "Couple 20") {
             discount = (2200 / 100) * 20;
+            grandTotal = 2200 - discount;
             setTextElementValueById("discount", discount);
+            hideElementById("input_field");
+            setTextElementValueById("grand_total", grandTotal);
         }
 
     }
@@ -210,36 +223,15 @@ function applyDiscount() {
 
     const copuponCode = getInputValue("copupon_code");
     const seat = getTextElementValueById("select_seat");
-    console.log(seat);
-    countDiscountPrice(copuponCode,seat);
+    countDiscountPrice(copuponCode, seat);
 
 }
 
 
 
 function ticketA1() {
-
-    // mainCode("A1");
-
-    let four = getTextElementValueById("select_seat");
-    if (four <= 3) {
-        if ("bg-primary_color" != checkDouble("A1")) {
-            const id = getElementTextById("A1");
-            setBackgroundColorById(id);
-            minusNumber("current_set");
-            plusNumber("select_seat");
-            setSeatNameAndPrice("A1");
-            countTotalPrice("select_seat");
-
-        }
-    }
-
-
+    mainCode("A1");
 }
-
-
-
-
 
 function ticketA2() {
     mainCode("A2");
@@ -267,4 +259,132 @@ function ticketB3() {
 
 function ticketB4() {
     mainCode("B4")
+}
+
+function ticketC1() {
+    mainCode("C1")
+}
+
+function ticketC2() {
+    mainCode("C2")
+}
+
+function ticketC3() {
+    mainCode("C3")
+}
+
+function ticketC4() {
+    mainCode("C4")
+}
+
+function ticketD1() {
+    mainCode("D1")
+}
+
+function ticketD2() {
+    mainCode("D2")
+}
+
+function ticketD3() {
+    mainCode("D3")
+}
+
+function ticketD4() {
+    mainCode("D4")
+}
+
+function ticketE1() {
+    mainCode("E1")
+}
+
+function ticketE2() {
+    mainCode("E2")
+}
+
+function ticketE3() {
+    mainCode("E3")
+}
+
+function ticketE4() {
+    mainCode("E4")
+}
+
+function ticketF1() {
+    mainCode("F1")
+}
+
+function ticketF2() {
+    mainCode("F2")
+}
+
+function ticketF3() {
+    mainCode("F3")
+}
+
+function ticketF4() {
+    mainCode("F4")
+}
+
+function ticketG1() {
+    mainCode("G1")
+}
+
+function ticketG2() {
+    mainCode("G2")
+}
+
+function ticketG3() {
+    mainCode("G3")
+}
+
+function ticketG4() {
+    mainCode("G4")
+}
+
+function ticketH1() {
+    mainCode("H1")
+}
+
+function ticketH2() {
+    mainCode("H2")
+}
+
+function ticketH3() {
+    mainCode("H3")
+}
+
+function ticketH4() {
+    mainCode("H4")
+}
+
+function ticketI1() {
+    mainCode("I1")
+}
+
+function ticketI2() {
+    mainCode("I2")
+}
+
+function ticketI3() {
+    mainCode("I3")
+}
+
+function ticketI4() {
+    mainCode("I4")
+}
+
+function ticketJ1() {
+    mainCode("J1")
+}
+
+function ticketJ2() {
+    mainCode("J2")
+}
+
+function ticketJ3() {
+    mainCode("J3")
+}
+
+function ticketJ4() {
+    mainCode("J4")
 }
