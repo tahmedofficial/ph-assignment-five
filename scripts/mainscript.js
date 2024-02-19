@@ -15,6 +15,15 @@ function getElementTextById(elementId) {
     return text;
 }
 
+// get input value
+function getInputValue(elementId) {
+
+    const inputField = document.getElementById(elementId);
+    const inputValueText = inputField.value;
+    return inputValueText;
+
+}
+
 // convert to int
 function getTextElementValueById(elementId) {
     const element = document.getElementById(elementId);
@@ -29,7 +38,7 @@ function setTextElementValueById(elementId, value) {
     element.innerText = value;
 }
 
-// set html unused
+// set html
 function setHtmlElementValueById(elementId) {
     const element = document.getElementById(elementId);
     const div = document.createElement("div");
@@ -41,6 +50,69 @@ function setHtmlElementValueById(elementId) {
     </div>
     `
     element.appendChild(div);
+}
+// set html 2
+function setHtmlElementValueById2(elementId) {
+    const element = document.getElementById(elementId);
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div id="get_html" class="flex justify-between text-[#0000007e]">
+         <P id="seat_name2" class="text-xl"></P>
+         <P class="text-xl">Economoy</P>
+         <P class="text-xl">550</P>
+    </div>
+    `
+    element.appendChild(div);
+}
+// set html 3
+function setHtmlElementValueById3(elementId) {
+    const element = document.getElementById(elementId);
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div id="get_html" class="flex justify-between text-[#0000007e]">
+         <P id="seat_name3" class="text-xl"></P>
+         <P class="text-xl">Economoy</P>
+         <P class="text-xl">550</P>
+    </div>
+    `
+    element.appendChild(div);
+}
+// set html 4 
+function setHtmlElementValueById4(elementId) {
+    const element = document.getElementById(elementId);
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div id="get_html" class="flex justify-between text-[#0000007e]">
+         <P id="seat_name4" class="text-xl"></P>
+         <P class="text-xl">Economoy</P>
+         <P class="text-xl">550</P>
+    </div>
+    `
+    element.appendChild(div);
+}
+
+// set seat name and price
+function setSeatNameAndPrice(elementId) {
+
+    let finishFour = getTextElementValueById("select_seat");
+
+    if (finishFour < 2) {
+        setHtmlElementValueById("set_html");
+        setTextElementValueById("seat_name", elementId);
+    }
+    else if (finishFour < 3) {
+        setHtmlElementValueById2("set_html");
+        setTextElementValueById("seat_name2", elementId);
+    }
+    else if (finishFour < 4) {
+        setHtmlElementValueById3("set_html");
+        setTextElementValueById("seat_name3", elementId);
+    }
+    else if (finishFour < 5) {
+        setHtmlElementValueById4("set_html");
+        setTextElementValueById("seat_name4", elementId);
+    }
+
 }
 
 // minus number
@@ -57,6 +129,50 @@ function plusNumber(elementId) {
     setTextElementValueById(elementId, seat);
 }
 
+// count total price
+function countTotalPrice(elementId) {
+    const ticketNumber = getTextElementValueById(elementId);
+
+    let totalPrice = 0;
+
+    if (ticketNumber < 2) {
+        totalPrice = 550
+    }
+    else if (ticketNumber < 3) (
+        totalPrice = 1100
+    )
+    else if (ticketNumber < 4) (
+        totalPrice = 1650
+    )
+    else if (ticketNumber < 5) (
+        totalPrice = 2200
+    )
+
+    setTextElementValueById("total_price", totalPrice);
+    setTextElementValueById("grand_total", totalPrice);
+
+}
+
+// count discount price
+function countDiscountPrice(coupon, value) {
+
+    if (value == 4) {
+
+        let discount = 0;
+        if (coupon == "NEW15") {
+            discount = (2200 / 100) * 15;
+            setTextElementValueById("discount", discount);
+        }
+        else if (coupon == "Couple 20") {
+            discount = (2200 / 100) * 20;
+            setTextElementValueById("discount", discount);
+        }
+
+    }
+
+}
+
+
 // check double
 function checkDouble(elementId) {
     const getClass = document.getElementById(elementId);
@@ -71,15 +187,17 @@ function checkDouble(elementId) {
 
 // main code
 function mainCode(elementId) {
-    const finishFour = getTextElementValueById("select_seat");
-    if(finishFour<=3){
+    let finishFour = getTextElementValueById("select_seat");
+    if (finishFour <= 3) {
         if ("bg-primary_color" != checkDouble(elementId)) {
             const id = getElementTextById(elementId);
             setBackgroundColorById(id);
             minusNumber("current_set");
             plusNumber("select_seat");
-            // setHtmlElementValueById("set_html");
-            setTextElementValueById("seat_name", elementId);
+            setSeatNameAndPrice(elementId);
+
+            countTotalPrice("select_seat");
+
         }
     }
 }
@@ -87,19 +205,32 @@ function mainCode(elementId) {
 // Utlity function end
 
 
+// apply discount
+function applyDiscount() {
+
+    const copuponCode = getInputValue("copupon_code");
+    const seat = getTextElementValueById("select_seat");
+    console.log(seat);
+    countDiscountPrice(copuponCode,seat);
+
+}
+
+
+
 function ticketA1() {
 
     // mainCode("A1");
 
-    const four = getTextElementValueById("select_seat");
-    if(four<=3){
+    let four = getTextElementValueById("select_seat");
+    if (four <= 3) {
         if ("bg-primary_color" != checkDouble("A1")) {
             const id = getElementTextById("A1");
             setBackgroundColorById(id);
             minusNumber("current_set");
             plusNumber("select_seat");
-            setTextElementValueById("seat_name", "A1")
-    
+            setSeatNameAndPrice("A1");
+            countTotalPrice("select_seat");
+
         }
     }
 
@@ -131,9 +262,9 @@ function ticketB2() {
 }
 
 function ticketB3() {
-   mainCode("B3")
+    mainCode("B3")
 }
 
 function ticketB4() {
-   mainCode("B4")
+    mainCode("B4")
 }

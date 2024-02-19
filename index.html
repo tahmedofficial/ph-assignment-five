@@ -508,16 +508,7 @@
                         <hr class="border border-dashed border-[#cdcdcdea] w-full">
 
                         <div id="set_html" class="flex flex-col gap-3 my-4">
-                            <div id="get_html" class="flex justify-between text-[#0000007e]">
-                                <P id="seat_name" class="text-xl"></P>
-                                <P class="text-xl">Economoy</P>
-                                <P class="text-xl">550</P>
-                            </div>
-                            <div id="get_html" class="flex justify-between text-[#0000007e]">
-                                <P id="seat_name" class="text-xl"></P>
-                                <P class="text-xl">Economoy</P>
-                                <P class="text-xl">550</P>
-                            </div>
+                            <!-- edit by javaScript-->
                         </div>
 
                         <!-- border -->
@@ -525,23 +516,23 @@
 
                         <div class="flex justify-between my-5">
                             <P class="text-xl text-black">Total Price</P>
-                            <P class="text-xl text-black">BDT <span>0</span></P>
+                            <P class="text-xl text-black">BDT <span id="total_price">0</span></P>
                         </div>
                         <div class="flex justify-between my-5">
                             <P class="text-xl text-black">Discount Price</P>
-                            <P class="text-xl text-black">BDT <span>0</span></P>
+                            <P class="text-xl text-black">BDT <span id="discount">0</span></P>
                         </div>
 
                         <div>
                             <label class="input flex border-0 h-14">
-                                <input type="text" class="grow" placeholder="Have any copupon?" />
-                                <button class="btn text-white bg-primary_color my-auto">Apply</button>
+                                <input id="copupon_code" type="text" class="grow" placeholder="Have any copupon?" />
+                                <button onclick="applyDiscount()" class="btn text-white bg-primary_color my-auto">Apply</button>
                             </label>
                         </div>
 
                         <div class="flex justify-between mt-5">
                             <P class="text-xl text-black">Grand Total</P>
-                            <P class="text-xl text-black">BDT <span>0</span></P>
+                            <P class="text-xl text-black">BDT <span id="grand_total">0</span></P>
                         </div>
 
                     </div>
