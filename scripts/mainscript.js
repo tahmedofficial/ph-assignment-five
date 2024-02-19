@@ -15,6 +15,11 @@ function removeBackgroundColorById(elementId) {
     element.classList.remove("text-white");
 }
 
+function removeHtmlElement(elementId) {
+    let div = document.getElementById(elementId);
+    div.remove();
+}
+
 // hide element
 function hideElementById(elementId) {
     const element = document.getElementById(elementId);
@@ -224,6 +229,7 @@ function removeSeat(elementId) {
         setTextElementValueById("grand_total", "0");
         setTextElementValueById("current_set", "40");
         setInputValue("phone_number", "");
+        removeHtmlElement("get_html");
     }
     if (seatNumber < 3) {
         const seatName1 = getElementTextById("seat_name");
@@ -235,6 +241,8 @@ function removeSeat(elementId) {
         setTextElementValueById("grand_total", "0");
         setTextElementValueById("current_set", "40");
         setInputValue("phone_number", "");
+        removeHtmlElement("get_html");
+        removeHtmlElement("get_html");
     }
     if (seatNumber < 4) {
         const seatName1 = getElementTextById("seat_name");
@@ -248,6 +256,9 @@ function removeSeat(elementId) {
         setTextElementValueById("grand_total", "0");
         setTextElementValueById("current_set", "40");
         setInputValue("phone_number", "");
+        removeHtmlElement("get_html");
+        removeHtmlElement("get_html");
+        removeHtmlElement("get_html");
     }
     if (seatNumber < 5) {
         const seatName1 = getElementTextById("seat_name");
@@ -263,6 +274,10 @@ function removeSeat(elementId) {
         setTextElementValueById("grand_total", "0");
         setTextElementValueById("current_set", "40");
         setInputValue("phone_number", "");
+        removeHtmlElement("get_html");
+        removeHtmlElement("get_html");
+        removeHtmlElement("get_html");
+        removeHtmlElement("get_html");
     }
 
 }
