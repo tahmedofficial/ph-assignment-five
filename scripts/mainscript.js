@@ -219,7 +219,6 @@ function mainCode(elementId) {
             minusNumber("current_set");
             plusNumber("select_seat");
             setSeatNameAndPrice(elementId);
-
             countTotalPrice("select_seat");
 
         }
@@ -228,27 +227,31 @@ function mainCode(elementId) {
 
 // Utlity function end
 
-
 // apply discount
 function applyDiscount() {
-
     const copuponCode = getInputValue("copupon_code");
     const seat = getTextElementValueById("select_seat");
     countDiscountPrice(copuponCode, seat);
-
 }
 
 // next button
 function nextButton() {
-
+    hideElementById("header_container");
+    hideElementById("main_container");
+    hideElementById("footer_container");
+    showElementById("success_container");
 }
 
 // continue button
 function continueButton() {
-
+    hideElementById("success_container");
+    showElementById("header_container");
+    showElementById("main_container");
+    showElementById("footer_container");
 }
 
 
+// seat function start
 
 function ticketA1() {
     mainCode("A1");
@@ -409,3 +412,5 @@ function ticketJ3() {
 function ticketJ4() {
     mainCode("J4")
 }
+
+// seat function end
