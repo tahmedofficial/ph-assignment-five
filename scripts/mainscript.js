@@ -12,7 +12,13 @@ function setBackgroundColorById(elementId) {
 function hideElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add("hidden");
-};
+}
+
+// show element
+function showElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove("hidden");
+}
 
 // get element text
 function getElementTextById(elementId) {
@@ -171,6 +177,7 @@ function countDiscountPrice(coupon, value) {
             grandTotal = 2200 - discount;
             setTextElementValueById("discount", discount);
             hideElementById("input_field");
+            hideElementById("invalid_coupon");
             setTextElementValueById("grand_total", grandTotal);
         }
         else if (coupon == "Couple 20") {
@@ -178,7 +185,11 @@ function countDiscountPrice(coupon, value) {
             grandTotal = 2200 - discount;
             setTextElementValueById("discount", discount);
             hideElementById("input_field");
+            hideElementById("invalid_coupon");
             setTextElementValueById("grand_total", grandTotal);
+        }
+        else {
+            showElementById("invalid_coupon");
         }
 
     }
@@ -224,6 +235,16 @@ function applyDiscount() {
     const copuponCode = getInputValue("copupon_code");
     const seat = getTextElementValueById("select_seat");
     countDiscountPrice(copuponCode, seat);
+
+}
+
+// next button
+function nextButton() {
+
+}
+
+// continue button
+function continueButton() {
 
 }
 
