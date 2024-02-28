@@ -86,7 +86,7 @@ function setHtmlElementValueById2(elementId) {
     const element = document.getElementById(elementId);
     const div = document.createElement("div");
     div.innerHTML = `
-    <div id="get_html" class="flex justify-between text-[#0000007e]">
+    <div id="get_html" class="flex justify-between mt-2 text-[#0000007e]">
          <P id="seat_name2" class="text-xl"></P>
          <P class="text-xl">Economoy</P>
          <P class="text-xl">550</P>
@@ -99,7 +99,7 @@ function setHtmlElementValueById3(elementId) {
     const element = document.getElementById(elementId);
     const div = document.createElement("div");
     div.innerHTML = `
-    <div id="get_html" class="flex justify-between text-[#0000007e]">
+    <div id="get_html" class="flex justify-between mt-2 text-[#0000007e]">
          <P id="seat_name3" class="text-xl"></P>
          <P class="text-xl">Economoy</P>
          <P class="text-xl">550</P>
@@ -112,7 +112,7 @@ function setHtmlElementValueById4(elementId) {
     const element = document.getElementById(elementId);
     const div = document.createElement("div");
     div.innerHTML = `
-    <div id="get_html" class="flex justify-between text-[#0000007e]">
+    <div id="get_html" class="flex justify-between mt-2 text-[#0000007e]">
          <P id="seat_name4" class="text-xl"></P>
          <P class="text-xl">Economoy</P>
          <P class="text-xl">550</P>
@@ -324,7 +324,7 @@ function applyDiscount() {
 function nextButton() {
 
     const phoneNumber = getInputValue("phone_number");
-    if (phoneNumber.length != 0) {
+    if (phoneNumber.length == 11) {
         const seatName = getElementTextById("seat_name");
         if (seatName != null) {
 
